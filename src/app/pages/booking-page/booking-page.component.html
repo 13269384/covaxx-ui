@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+<title> Booking Form</title>
+</head>
+
+
+<body>
+<div class ="container">
+  <h4 class="patientTitle">Patient Details </h4>
+</div>
+
+<br>
+
+<div class ="container">
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+  <div class="col-md-3">
+    <label for="cc-expiration" class="form-label">Date of Birth</label>
+    <input type="date" class="form-control" id="cc-expiration" placeholder="" required>
+    <div class="invalid-feedback">
+      Date of birth required
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+
+
+<div class="container">
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Select State or Territory</option>
+    <option value="1">NSW</option>
+    <option value="2">VIC</option>
+    <option value="3">QLD</option>
+    <option value="4">ACT</option>
+    <option value="5">NT</option>
+    <option value="6">TAS</option>
+    <option value="7">SA</option>
+  </select>
+</div>
+
+
+<br>
+
+
+<div class="container">
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">What is your current occupation?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</div>
+
+
+<br>
+
+<div class="container">
+  <h4 class="bookingTitle">Booking Details </h4>
+</div>
+
+<br>
+
+<div class="container">
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Select Practice</option>
+    <option value="1">Plumpton Medical Centre</option>
+    <option value="2">Chatswood Medical Centre</option>
+    <option value="3">Bondi Medical Centre</option>
+  </select>
+</div>
+
+
+<br>
+
+<div class="container">
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Select Practitioner</option>
+    <option value="1">Dr Sally Field </option>
+    <option value="2">Dr Ben Martin </option>
+    <option value="3">Dr Jenny Zhao</option>
+  </select>
+</div>
+
+<br>
+
+<div class="container">
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Select Available Date</option>
+    <option value="1">22/05/21 </option>
+    <option value="2">23/05/21 </option>
+    <option value="3">24/05/21</option>
+  </select>
+</div>
+
+<br>
+
+<div class="container">
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Select Available Time</option>
+    <option value="1">09:00 am </option>
+    <option value="2">12:00 pm </option>
+    <option value="3">02:00 pm</option>
+  </select>
+</div>
+
+<br>
+
+
+
+
+<div class="container">
+  <h6 class="disability">Are you a person with a significant disability ?</h6>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Yes
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+    <label class="form-check-label" for="flexRadioDefault2">
+      No
+    </label>
+  </div>
+</div>
+
+
+<br>
+
+<div class="container">
+  <h6 class="medicalCondition">Do you have an underlying medical condition?</h6>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Yes
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+    <label class="form-check-label" for="flexRadioDefault2">
+      No
+    </label>
+  </div>
+</div>
+
+
+
+
+
+<br>
+
+
+<div class="container">
+  <button type="button" class="btn btn-primary">Submit</button>
+</div>
+
+<br>
+
+
+
+</body>
+</html>
