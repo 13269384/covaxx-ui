@@ -5,7 +5,7 @@
 <head>
 <title> Booking Form</title>
 </head>
-
+<!--<pre>{{session| json}}</pre>-->
 
 <body>
 <div class ="container">
@@ -59,10 +59,11 @@
 
 <div class="container">
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">What is your current occupation?</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="occupation" class="form-label">What is your current occupation?</label>
+    <textarea [(ngModel)] = "patientOccupation" class="form-control" id="occupation" rows="3"></textarea>
   </div>
 </div>
+
 
 
 <br>
@@ -127,18 +128,17 @@
 
   <div class="form-check">
     <input class="form-check-input" type="radio" name="disability" id="disability1">
-    <label class="form-check-label" for="disability1">
+    <label [(ngModel)] = "patientDisability" class="form-check-label" for="disability1">
       Yes
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="disability" id="disability2" checked>
-    <label class="form-check-label" for="disability2">
+    <input class="form-check-input" type="radio" name="disability" id="disability2" checked >
+    <label [(ngModel)] = "patientDisability" class="form-check-label" for="disability2">
       No
     </label>
   </div>
 </div>
-
 
 <br>
 
@@ -147,13 +147,13 @@
 
   <div class="form-check">
     <input class="form-check-input" type="radio" name="medcon" id="medcon1">
-    <label class="form-check-label" for="medcon1">
+    <label [(ngModel)] = "patientMedCondition" class="form-check-label" for="medcon1">
       Yes
     </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="radio" name="medcon" id="medcon2" checked>
-    <label class="form-check-label" for="medcon2">
+    <label [(ngModel)] = "patientMedCondition"  class="form-check-label" for="medcon2">
       No
     </label>
   </div>

@@ -15,6 +15,10 @@ export class BookingPageComponent implements OnInit {
   patientMedCondition: string;
 
   // @ts-ignore
+  patientOccupation: string;
+
+
+  // @ts-ignore
   patient: Patient;
   // @ts-ignore
   patientId: string;

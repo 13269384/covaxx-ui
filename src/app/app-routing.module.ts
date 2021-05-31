@@ -10,6 +10,7 @@ const routes: Routes = [
   },
 
   {
+    // path is incorrect
     path: 'booking',
     component: BookingPageComponent
   }
