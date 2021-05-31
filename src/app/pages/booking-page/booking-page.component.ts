@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {ApiService, Patient, Session} from '../../services/api.service';
 
 @Component({
   selector: 'app-booking-page',
@@ -7,9 +9,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingPageComponent implements OnInit {
 
-  constructor() { }
+  // @ts-ignore
+  patientDisability: string;
+  // @ts-ignore
+  patientMedCondition: string;
 
-  ngOnInit(): void {
+  // @ts-ignore
+  patient: Patient;
+  // @ts-ignore
+  patientId: string;
+
+  // @ts-ignore
+  session: Session;
+  // @ts-ignore
+  sessionId: string;
+
+  constructor(
+    // public route: ActivatedRoute
+    public api: ApiService
+  ) { }
+// @ts-ignore
+  currentPractice: Practice[];
+  // @ts-ignore
+  currentSession: Session[];
+  async ngOnInit(): Promise<void> {
+
+    // this.patientId = this.api.getPatient (this.route.snapshot.params.patientId) ;
+    // @ts-ignore
+    this.currentPractice = await this.api.getPractice();
+    // @ts-ignore
+    this.currentSession = await this.api.getSession();
+
   }
 
+  // tslint:disable-next-line:typedef
+  async submit() {
+    await this.api.createPatient(this.patient);
+  }
 }
