@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <title> Booking Form</title>
+</head>
+
+<br>
+
+<div class ="container">
+
+  <div>
+    <h1> Available Sessions</h1>
+
+    <br>
+
+    <ul class="list-group">
+      <a class="list-group-item" *ngFor="let sessions of availableSessions" routerLink="confirmation">Click to select session>>
+        <p>Date : {{sessions.sessionDate}} <br> Time : {{sessions.sessionTime}}</p>
+      </a>
+    </ul>
+
+  </div>
+
+
+</div>

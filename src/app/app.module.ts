@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { PatientComponent } from './pages/patient/patient.component';
 import { PractitionerComponent } from './pages/practitioner/practitioner.component';
 import { SessionsComponent } from './pages/sessions/sessions.component';
+import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SessionsComponent } from './pages/sessions/sessions.component';
     BookingPageComponent,
     PatientComponent,
     PractitionerComponent,
-    SessionsComponent
+    SessionsComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
