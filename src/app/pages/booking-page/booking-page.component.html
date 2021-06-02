@@ -9,10 +9,10 @@
 <!--<pre>{{session| json}}</pre>-->
 
 <!--<body>-->
-<!--<div class ="container">-->
+<div class ="container">
 <!--  <h4 class="patientTitle">Patient Details </h4>-->
 <!--</div>-->
-
+  <br>
 
 <!--<br>-->
 
@@ -110,15 +110,15 @@
 
 <!--<br>-->
 
-<div class="container">
-  <select class="form-select" aria-label="Default select example" *ngFor="let practices of currentPractices">>
-    <option selected>Select Available Time</option>
-<!--    <option value="1">09:00 am </option>-->
-<!--    <option value="2">12:00 pm </option>-->
-<!--    <option value="3">02:00 pm</option>-->
-    <option value = "1">  {{practices.practiceId}} , {{practices.practiceName}} </option>
-  </select>
-</div>
+<!--<div class="container">-->
+<!--  <select class="form-select" aria-label="Default select example" *ngFor="let practices of currentPractices">>-->
+<!--    <option selected>Select Available Time</option>-->
+<!--&lt;!&ndash;    <option value="1">09:00 am </option>&ndash;&gt;-->
+<!--&lt;!&ndash;    <option value="2">12:00 pm </option>&ndash;&gt;-->
+<!--&lt;!&ndash;    <option value="3">02:00 pm</option>&ndash;&gt;-->
+<!--    <option value = "1">  {{practices.practiceId}} , {{practices.practiceName}} </option>-->
+<!--  </select>-->
+<!--</div>-->
 
 <!--<br>-->
 
@@ -129,12 +129,12 @@
 <!--  <h6 class="disability">Are you a person with a significant disability ?</h6>-->
 
 
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="disability" id="disability1">
-    <label class="form-check-label" *ngFor="let practices of currentPractices">>
-      <p> {{practices.practiceId}} , {{practices.practiceName}}</p>
-    </label>
-  </div>
+<!--  <div class="form-check">-->
+<!--    <input class="form-check-input" type="radio" name="disability" id="disability1">-->
+<!--    <label class="form-check-label" *ngFor="let practices of currentPractices">>-->
+<!--      <p> {{practices.practiceId}} , {{practices.practiceName}}</p>-->
+<!--    </label>-->
+<!--  </div>-->
 <!--  <div class="form-check">-->
 <!--    <input class="form-check-input" type="radio" name="disability" id="disability2" checked >-->
 <!--    <label [(ngModel)] = "patientDisability" class="form-check-label" for="disability2">-->
@@ -179,17 +179,21 @@
 
 <!--</body>-->
 
-<body>
-<div class="container">
+<!--<body>-->
+<!--<div class="container">-->
 
 <div>
   <h1> Available Practices</h1>
+  <br>
+
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let practices of currentPractices">
+    <a class="list-group-item" *ngFor="let practices of currentPractices" routerLink="practitioner">
       <p> {{practices.practiceName}} ({{practices.practiceId}})</p>
-    </li>
+    </a>
   </ul>
 </div>
+
+
 
 <!--<div class="form-check">-->
 <!--  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">-->
@@ -198,44 +202,44 @@
 <!--  </label>-->
 <!--</div>-->
 
-<br>
+<!--<br>-->
 
-<div>
-  <h1> Available Practitioners</h1>
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let practitioners of currentPractitioners">
-      <p> {{practitioners.practitionerName}} ({{practitioners.practitionerId}})</p>
-    </li>
-  </ul>
-</div>
+<!--<div>-->
+<!--  <h1> Available Practitioners</h1>-->
+<!--  <ul class="list-group">-->
+<!--    <li class="list-group-item" *ngFor="let practitioners of currentPractitioners">-->
+<!--      <p> {{practitioners.practitionerName}} ({{practitioners.practitionerId}})</p>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->
 
-<br>
+<!--<br>-->
 
-<div>
-  <h1> Available Sessions</h1>
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let sessions of availableSessions">
-      <p>{{sessions.sessionId}} , {{sessions.sessionDate}} , {{sessions.sessionTime}}</p>
-    </li>
-  </ul>
-</div>
+<!--<div>-->
+<!--  <h1> Available Sessions</h1>-->
+<!--  <ul class="list-group">-->
+<!--    <li class="list-group-item" *ngFor="let sessions of availableSessions">-->
+<!--      <p>{{sessions.sessionId}} , {{sessions.sessionDate}} , {{sessions.sessionTime}}</p>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->
 
-  <br>
+<!--  <br>-->
 
-  <div>
-    <h1> Current Patients</h1>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let patients of currentPatients">
-        <p>{{patients.patientId}} , {{patients.patientName}} , {{patients.patientDOB}} , {{patients.patientState}} , {{patients.patientOccupation}} , {{patients.patientDisability}} , {{patients.patientMedCondition}} </p>
-      </li>
-    </ul>
+<!--  <div>-->
+<!--    <h1> Current Patients</h1>-->
+<!--    <ul class="list-group">-->
+<!--      <li class="list-group-item" *ngFor="let patients of currentPatients">-->
+<!--        <p>{{patients.patientId}} , {{patients.patientName}} , {{patients.patientDOB}} , {{patients.patientState}} , {{patients.patientOccupation}} , {{patients.patientDisability}} , {{patients.patientMedCondition}} </p>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+
+<!--  <br>-->
+<!--  <div class="container">-->
+<!--    <button type="button" class="btn btn-primary"(click) = "submit()" >Submit</button>-->
+<!--  </div>-->
+
+
   </div>
-
-  <br>
-  <div class="container">
-    <button type="button" class="btn btn-primary"(click) = "submit()" >Submit</button>
-  </div>
-
-</div>
-</body>
 </html>

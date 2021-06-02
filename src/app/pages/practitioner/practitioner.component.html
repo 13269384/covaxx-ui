@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <title> Booking Form</title>
+</head>
+
+<br>
+
+<div class ="container">
+
+<div>
+  <h1> Available Practitioners</h1>
+
+  <br>
+
+  <ul class="list-group">
+    <a class="list-group-item" *ngFor="let practitioners of currentPractitioners" routerLink="sessions">
+      <p> {{practitioners.practitionerName}} ({{practitioners.practitionerId}})</p>
+    </a>
+  </ul>
+</div>
+
+</div>

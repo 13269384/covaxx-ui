@@ -8,13 +8,17 @@ import { BookingPageComponent } from './pages/booking-page/booking-page.componen
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { PatientComponent } from './pages/patient/patient.component';
+import { PractitionerComponent } from './pages/practitioner/practitioner.component';
+import { SessionsComponent } from './pages/sessions/sessions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     BookingPageComponent,
-    PatientComponent
+    PatientComponent,
+    PractitionerComponent,
+    SessionsComponent
   ],
   imports: [
     BrowserModule,
