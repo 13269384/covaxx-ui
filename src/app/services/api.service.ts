@@ -36,44 +36,68 @@ export interface Practice {
 })
 export class ApiService {
 
+
   constructor(
     public http: HttpClient
   ) { }
 
  // @ts-ignore
   // @ts-ignore
-  createSession(session: Session): Promise<Session>{
-    return this.http.post<Session>('http://localhost:8080/sessions', session).toPromise();
+  // createSession(session: Session): Promise<Session>{
+  //   return this.http.post<Session>('http://localhost:8080/sessions', session).toPromise();
+  // }
+  //
+  // createPatient(patient: Patient): Promise<Patient>{
+  //   return this.http.post<Patient>('http://localhost:8080/patients', patient).toPromise();
+  // }
+  //
+  // createPractice(practice: Practice): Promise<Practice>{
+  //   return this.http.post<Practice>('http://localhost:8080/practices', practice).toPromise();
+  // }
+  //
+  // createPractitioner(practitioner: Practitioner): Promise<Practitioner>{
+  //   return this.http.post<Practitioner>('http://localhost:8080/practitioner', practitioner).toPromise();
+  // }
+  //
+  // getSession(practiceID: string): Promise<Session>{
+  //   return this.http.get<Session>('http://localhost:8080/practices' + practiceID + '/sessions').toPromise();
+  // }
+  //
+
+  // getPractice(practiceId: string): Promise<Practice>{
+  //   return this.http.get<Practice>('http://localhost:8080/practices/' + practiceId).toPromise();
+  // }
+  getPractices(): Promise<Practice[]>{
+    return this.http.get<Practice[]>('http://localhost:8080/practices').toPromise();
   }
 
-  createPatient(patient: Patient): Promise<Patient>{
-    return this.http.post<Patient>('http://localhost:8080/patients', patient).toPromise();
+  getPractitioners(): Promise<Practitioner[]>{
+    return this.http.get<Practitioner[]>('http://localhost:8080/practitioner').toPromise();
   }
 
-  createPractice(practice: Practice): Promise<Practice>{
-    return this.http.post<Practice>('http://localhost:8080/practices', practice).toPromise();
-  }
+ getSessions(): Promise<Session[]>{
+    return this.http.get<Session[]>('http://localhost:8080/sessions').toPromise();
+ }
 
-  createPractitioner(practitioner: Practitioner): Promise<Practitioner>{
-    return this.http.post<Practitioner>('http://localhost:8080/practitioner', practitioner).toPromise();
-  }
+ getPatients(): Promise<Patient[]>{
+    return this.http.get<Patient[]>('http://localhost:8080/patients').toPromise();
+ }
 
-  getSession(practiceID: string): Promise<Session>{
-    return this.http.get<Session>('http://localhost:8080/practices' + practiceID + '/sessions').toPromise();
-  }
+  //
+  // getPractitioner(practitionerId: string): Promise<Practitioner>{
+  //   return this.http.get<Practitioner>('http://localhost:8080/practitioner').toPromise();
+  // }
 
-  getPractice(practiceId: string): Promise<Practice>{
-    return this.http.get<Practice>('http://localhost:8080/practices').toPromise();
-  }
-
-  getPractitioner(practitionerId: string): Promise<Practitioner>{
-    return this.http.get<Practitioner>('http://localhost:8080/practitioner').toPromise();
-  }
-}
+  // getPractice(practiceId: string): Promise<Practice> {
+  //   this.http.get<Practice>('http://localhost:8080/practices').subscribe(data => {
+  //     this.Practice = data.practiceName;
+  //   });
+  //
+  // }
 
 
 
   //   createPatient (patient: Patient ): Patient{
 //     return ;
 //   }
-// }
+}
