@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <title> Patient Details</title>
+</head>
+
+<body>
+<div class ="container">
+  <h1 class="patientTitle">Patient Details </h1>
+
+
+
+<br>
+
+<div>
+  <h4> Patient Id</h4>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let patients of currentPatients">
+      <p>{{patients.patientId}}</p>
+    </li>
+  </ul>
+</div>
+
+
+
+  <br>
+
+  <div>
+    <h4>Full Name</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let patients of currentPatients">
+        <p>{{patients.patientName}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div>
+    <h4>Date of Birth</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let patients of currentPatients">
+        <p>{{patients.patientDOB}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div>
+    <h4>Address: State</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let patients of currentPatients">
+        <p>{{patients.patientState}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div>
+    <h4>Occupation</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let patients of currentPatients">
+        <p>{{patients.patientOccupation}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div>
+    <h4>Are you a person with a significant disability?</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let patients of currentPatients">
+        <p>{{patients.patientDisability}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div>
+    <h4>Do you have an underlying medical condition?</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let patients of currentPatients">
+        <p>{{patients.patientMedCondition}}</p>
+      </li>
+    </ul>
+  </div>
+
+<!--<div class ="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col">-->
+<!--      <input type="text" class="form-control" placeholder="Patient Full Name" aria-label="Patient Full Name" >-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--<br>-->
+
+
+
+
+<!--<div class="container">-->
+<!--  <div class="col-md-3">-->
+<!--    <label for="cc-expiration" class="form-label">Date of Birth</label>-->
+<!--    <input type="date" class="form-control" id="cc-expiration" placeholder="" required>-->
+<!--    <div class="invalid-feedback">-->
+<!--      Date of birth required-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--<br>-->
+
+
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--  <div class="col">-->
+<!--    <input type="text" class="form-control" placeholder="State" aria-label="Patient State">-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--<br>-->
+
+
+<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;    <label for="occupation" class="form-label">What is your current occupation?</label>&ndash;&gt;-->
+<!--&lt;!&ndash;    <textarea [(ngModel)] = "patientOccupation" class="form-control" id="occupation" rows="3"></textarea>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;<br>&ndash;&gt;-->
+
+
+
+
+
+
+<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;  <h6 class="disability">Are you a person with a significant disability ?</h6>&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="form-check">&ndash;&gt;-->
+<!--&lt;!&ndash;    <input class="form-check-input" type="radio" name="disability" id="disability2" checked >&ndash;&gt;-->
+<!--&lt;!&ndash;    <label [(ngModel)] = "patientDisability" class="form-check-label" for="disability2">&ndash;&gt;-->
+<!--&lt;!&ndash;      No&ndash;&gt;-->
+<!--&lt;!&ndash;    </label>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<br>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;  <h6 class="medicalCondition">Do you have an underlying medical condition?</h6>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <div class="form-check">&ndash;&gt;-->
+<!--&lt;!&ndash;    <input class="form-check-input" type="radio" name="medcon" id="medcon1">&ndash;&gt;-->
+<!--&lt;!&ndash;    <label [(ngModel)] = "patientMedCondition" class="form-check-label" for="medcon1">&ndash;&gt;-->
+<!--&lt;!&ndash;      Yes&ndash;&gt;-->
+<!--&lt;!&ndash;    </label>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="form-check">&ndash;&gt;-->
+<!--&lt;!&ndash;    <input class="form-check-input" type="radio" name="medcon" id="medcon2" checked>&ndash;&gt;-->
+<!--&lt;!&ndash;    <label [(ngModel)] = "patientMedCondition"  class="form-check-label" for="medcon2">&ndash;&gt;-->
+<!--&lt;!&ndash;      No&ndash;&gt;-->
+<!--&lt;!&ndash;    </label>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+
+
+
+
+
+<!--<br>-->
+
+
+
+
+
+<!--  <br>-->
+
+<!--  <div>-->
+<!--    <h1> Current Patients</h1>-->
+<!--    <ul class="list-group">-->
+<!--      <li class="list-group-item" *ngFor="let patients of currentPatients">-->
+<!--        <p>{{patients.patientId}} , {{patients.patientName}} , {{patients.patientDOB}} , {{patients.patientState}} , {{patients.patientOccupation}} , {{patients.patientDisability}} , {{patients.patientMedCondition}} </p>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+
+<!--  <div>-->
+<!--    <h1> Current Patients</h1>-->
+<!--    <ul class="list-group">-->
+<!--      <li class="list-group-item" *ngFor="let patients of currentPatients">-->
+<!--        <p>{{patients.patientId}} , {{patients.patientName}} , {{patients.patientDOB}} , {{patients.patientState}} , {{patients.patientOccupation}} , {{patients.patientDisability}} , {{patients.patientMedCondition}} </p>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+
+<!--  <p class="h4"*ngFor="let patients of currentPatients">-->
+<!--  patientId {{patients.patientId}} , <br>Patient Name<br> {{patients.patientName}} <br> {{patients.patientDOB}} , {{patients.patientState}} , {{patients.patientOccupation}} , {{patients.patientDisability}} , {{patients.patientMedCondition}} </p>-->
+
+<!--  <br>-->
+<!--&lt;!&ndash;  <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;    <button type="button" class="btn btn-primary"(click) = "submit()" >Submit</button>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  routerLink="booking">Booking</a>&ndash;&gt;-->
+
+<!--&lt;!&ndash; <a>class = list-group-item routerLink="booking"&ndash;&gt;-->
+<!--&lt;!&ndash;   <button type="button"  class="btn btn-primary" =>Primary  </button>&ndash;&gt;-->
+<!--&lt;!&ndash; </a>&ndash;&gt;-->
+
+  <div class="container">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" routerLink="practice"> Next ></a>
+    </div>
+  </nav>
+  </div>
+
+</div>
+<!--</body>-->
+<!--</html>-->
+

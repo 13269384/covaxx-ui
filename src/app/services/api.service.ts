@@ -47,9 +47,9 @@ export class ApiService {
   //   return this.http.post<Session>('http://localhost:8080/sessions', session).toPromise();
   // }
   //
-  // createPatient(patient: Patient): Promise<Patient>{
-  //   return this.http.post<Patient>('http://localhost:8080/patients', patient).toPromise();
-  // }
+  createPatient(patient: Patient): Promise<Patient>{
+    return this.http.post<Patient>('http://localhost:8080/patients', patient).toPromise();
+  }
   //
   // createPractice(practice: Practice): Promise<Practice>{
   //   return this.http.post<Practice>('http://localhost:8080/practices', practice).toPromise();

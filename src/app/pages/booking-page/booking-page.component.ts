@@ -35,12 +35,12 @@ export class BookingPageComponent implements OnInit {
   // practiceId: '6613x' ;
   practitioner: Practitioner;
 
+
   constructor(
    public route: ActivatedRoute,
    public api: ApiService
 
   ) { }
-
 
 
 // @ts-ignore
@@ -56,6 +56,9 @@ export class BookingPageComponent implements OnInit {
 
   // @ts-ignore
   currentPatients: Patients[];
+
+  // @ts-ignore
+  patient: Patient;
 
 //   // @ts-ignore
 //   currentSession: Session[];
@@ -86,6 +89,12 @@ export class BookingPageComponent implements OnInit {
     this.availableSessions = await this.api.getSessions();
 
     this.currentPatients = await this.api.getPatients();
+  }
+
+
+  // tslint:disable-next-line:typedef
+  submit(){
+    this.api.createPatient(this.patient);
   }
 
 }
