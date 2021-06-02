@@ -5,6 +5,7 @@ import {BookingPageComponent} from './pages/booking-page/booking-page.component'
 import {PatientComponent} from './pages/patient/patient.component';
 import {PractitionerComponent} from './pages/practitioner/practitioner.component';
 import {SessionsComponent} from './pages/sessions/sessions.component';
+import {ConfirmationComponent} from './pages/confirmation/confirmation.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,11 @@ const routes: Routes = [
   {
     path: 'patient/practice/practitioner/sessions',
     component: SessionsComponent
+  },
+
+  {
+    path: 'patient/practice/practitioner/sessions/confirmation',
+    component: ConfirmationComponent
   },
 
 
